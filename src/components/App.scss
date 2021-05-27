@@ -92,9 +92,12 @@ main {
 		.row {
 			height: 100vh;
 			align-items: center;
+
 			.image-container {
+				z-index: 1;
 				position: relative;
 				.thumbnail {
+					text-align: center;
 					overflow: hidden;
 					position: relative;
 					.frame {
