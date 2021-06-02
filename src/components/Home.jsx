@@ -65,7 +65,7 @@ const Home = () => {
 											{position.y}.{getRandomNum()}° N
 										</span>
 										<ScrollForMore />
-										<span>
+										<span style={{ marginLeft: '5px' }}>
 											{position.x}.{getRandomNum()}° W
 										</span>
 									</div>
