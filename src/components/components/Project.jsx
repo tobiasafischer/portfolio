@@ -5,6 +5,7 @@ import './Project.scss';
 const Project = (props) => {
 	const [{ title }] = useState(props);
 	const [{ image }] = useState(props);
+	const [{ description }] = useState(props);
 	const [{ hasDemo }] = useState(props);
 	const [{ demoLink }] = useState(props);
 	const [{ github }] = useState(props);
@@ -22,9 +23,7 @@ const Project = (props) => {
 					rounded
 					thumbnail='true'
 				/>
-				<div
-					style={{ width: '40vw', alignItems: 'center', justifyContent: 'center' }}
-					className='overlay'>
+				<div style={{ alignItems: 'center', justifyContent: 'center' }} className='overlay'>
 					<a class='transparent' href='.overlay'>
 						<p>
 							<span class='bg'></span>
@@ -43,10 +42,7 @@ const Project = (props) => {
 			</div>
 			<h6>{title}</h6>
 			<div id='paragraph'>
-				<p>
-					A full stack application build in MERN which compiles data through Edamam's API to create
-					a recipe book + shopping list
-				</p>
+				<p>{description}</p>
 			</div>
 		</div>
 	);
