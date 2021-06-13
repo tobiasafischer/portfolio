@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ProgressiveImage from 'react-progressive-image';
-import image from '../assets/me and mikes.png';
-import compressedImage from '../assets/me and mikes-min.png';
 import Navigation from './components/Navigation';
 import ScrollForMore from './components/ScrollForMore';
 
@@ -46,7 +44,13 @@ const Home = () => {
 										height: imageDetails.height,
 									}}>
 									<div className='frame'>
-										<ProgressiveImage src={image} placeholder={compressedImage}>
+										<ProgressiveImage
+											src={
+												'https://firebasestorage.googleapis.com/v0/b/groupster-befe4.appspot.com/o/me%20and%20mikes.png?alt=media&token=cea1308f-a6c4-43a6-b2f5-3bfd1cb0cffa'
+											}
+											placeholder={
+												'https://firebasestorage.googleapis.com/v0/b/groupster-befe4.appspot.com/o/me%20and%20mikes-min.png?alt=media&token=39fff497-14d5-4735-a7d6-a98dc49698bc'
+											}>
 											{(src) => (
 												<motion.img
 													src={src}
