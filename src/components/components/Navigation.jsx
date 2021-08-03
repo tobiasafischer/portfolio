@@ -8,7 +8,7 @@ const Navigation = () => {
 
 	return (
 		<div id='navbar'>
-			<Modal show={show} onHide={handleClose}>
+			<Modal show={show} onHide={handleClose} centered>
 				<ContactForm />
 			</Modal>
 			<Navbar className='ml-auto'>
