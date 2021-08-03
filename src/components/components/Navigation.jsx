@@ -1,9 +1,16 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-
+import React, { useState } from 'react';
+import { Navbar, Nav, Modal } from 'react-bootstrap';
+import ContactForm from './ContactForm';
 const Navigation = () => {
+	const [show, setShow] = useState(false);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+
 	return (
 		<div id='navbar'>
+			<Modal show={show} onHide={handleClose}>
+				<ContactForm />
+			</Modal>
 			<Navbar className='ml-auto'>
 				<Navbar.Toggle />
 				<Navbar.Collapse>
@@ -17,9 +24,18 @@ const Navigation = () => {
 						<Nav.Link href='/projects'>
 							<span id='navigation'>projects</span>
 						</Nav.Link>
-						<Nav.Link href='/contact'>
+						<button
+							onClick={handleShow}
+							style={{
+								background: 'none',
+								border: 'none',
+								margin: 0,
+								padding: 0,
+								cursor: 'pointer',
+								marginLeft: '1vw',
+							}}>
 							<span id='navigation'>contact me</span>
-						</Nav.Link>
+						</button>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
