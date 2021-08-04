@@ -1,6 +1,7 @@
 $base: #0f1923;
 $white: #ece8e1;
 $pink: #d7a1ac;
+$title: #3c3b3b;
 $height: 54px;
 $transition: 0.3s ease-out all;
 
@@ -11,7 +12,31 @@ $transition: 0.3s ease-out all;
 	flex-wrap: wrap;
 	flex-direction: column;
 	width: 100%;
+
+	#title-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		z-index: 2;
+		padding: 1.25em, 1.25em, 0, 3em, 0, 0;
+		min-height: 4em;
+		border-bottom: solid 1px #3c3b3b;
+		background-color: $pink;
+		position: relative;
+
+		h3 {
+			// text-shadow: 0.5px 0.5px 0.5px $base, 0.5px 0.5px 0.5px $base;
+			letter-spacing: 0.2em;
+			color: $title;
+			margin-left: 1vw;
+			font-weight: 450px;
+			font-size: 1.5em;
+		}
+	}
+
 	#project {
+		border: solid 1px #3c3b3b;
 		height: auto;
 		position: relative;
 		text-align: center;
@@ -36,12 +61,12 @@ $transition: 0.3s ease-out all;
 			cursor: pointer;
 		}
 		.overlay {
-			width: 40vw;
+			width: 100%;
+			margin-left: 35vw;
 			transition: 0.5s ease;
 			opacity: 0;
 			position: absolute;
 			margin-top: 14vh;
-			left: 22vw;
 			transform: translate(-50%, -50%);
 			-ms-transform: translate(-50%, -50%);
 			text-align: center;
@@ -98,14 +123,12 @@ $transition: 0.3s ease-out all;
 						width: 100%;
 						height: 100%;
 						left: 0;
-						border: 1px solid $pink;
 						&:before {
 							content: '';
 							width: 2px;
 							height: 2px;
 							left: -1px;
 							top: -1px;
-							background: $base;
 							position: absolute;
 							transition: $transition;
 						}
@@ -156,8 +179,7 @@ $transition: 0.3s ease-out all;
 			align-items: center;
 
 			img {
-				width: 45vw;
-				box-shadow: 2px 2px 4px rgb(97, 97, 97);
+				width: 70vw;
 				transition: 0.5s ease;
 				backface-visibility: hidden;
 				opacity: 1;

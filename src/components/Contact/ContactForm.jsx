@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	submit: {
 		margin: theme.spacing(3, 0, 2),
+		backgroundColor: theme.palette.secondary.main,
 	},
 }));
 
@@ -127,11 +128,11 @@ const ContactForm = () => {
 							</Grid>
 						</Grid>
 						<Button
+							style={{ backgroundColor: '#d7a1ac', color: '#1e1f13' }}
 							type='submit'
 							disabled={loading}
 							fullWidth
 							variant='contained'
-							color='primary'
 							className={classes.submit}>
 							Send Email
 						</Button>
