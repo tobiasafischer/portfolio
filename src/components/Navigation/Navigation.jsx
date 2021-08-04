@@ -21,7 +21,7 @@ const Navigation = () => {
 						<Nav.Link href='/about'>
 							<span id='navigation'>about me</span>
 						</Nav.Link>
-						<Nav.Link href='/projects'>
+						<Nav.Link href='#projects'>
 							<span id='navigation'>projects</span>
 						</Nav.Link>
 						<button
