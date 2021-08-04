@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Modal } from 'react-bootstrap';
-import ContactForm from './ContactForm';
+import ContactForm from '../Contact/ContactForm';
 const Navigation = () => {
 	const [show, setShow] = useState(false);
 	const handleClose = () => setShow(false);
@@ -21,7 +21,7 @@ const Navigation = () => {
 						<Nav.Link href='/about'>
 							<span id='navigation'>about me</span>
 						</Nav.Link>
-						<Nav.Link href='/projects'>
+						<Nav.Link href='#projects'>
 							<span id='navigation'>projects</span>
 						</Nav.Link>
 						<button

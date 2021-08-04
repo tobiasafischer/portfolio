@@ -1,6 +1,6 @@
 $main: #f0d8bb;
 $white: #ffffff;
-$black: #1e1f13;
+$black: #3c3b3b;
 
 * {
 	box-sizing: border-box;
@@ -15,6 +15,8 @@ html {
 }
 
 body {
+	overflow-x: hidden;
+	max-width: 100%;
 	padding: 0;
 	margin: 0;
 	background-color: $main;
@@ -37,12 +39,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-	width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-	background: rgb(43, 43, 43);
-	/* #1e1e24 */
+	width: 0rem;
 }
 
 //Header

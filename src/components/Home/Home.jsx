@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ProgressiveImage from 'react-progressive-image';
-import Navigation from './components/Navigation';
-import ScrollForMore from './components/ScrollForMore';
+import Navigation from '../Navigation/Navigation';
+import ScrollForMore from '../Misc/ScrollForMore';
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 const imageDetails = {
