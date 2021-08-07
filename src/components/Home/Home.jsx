@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { scroller } from 'react-scroll';
+
 import ProgressiveImage from 'react-progressive-image';
 import ScrollForMore from '../Misc/ScrollForMore';
 
@@ -29,45 +31,54 @@ const useMousePosition = () => {
 const Home = () => {
 	const position = useMousePosition();
 	return (
-		<div className='row center'>
-			<div className='image-container'>
-				<div
-					className='thumbnail'
-					style={{
-						width: imageDetails.width,
-						height: imageDetails.height,
-					}}>
-					<div className='frame'>
-						<ProgressiveImage
-							src={
-								'https://firebasestorage.googleapis.com/v0/b/groupster-befe4.appspot.com/o/me%20and%20mikes.png?alt=media&token=cea1308f-a6c4-43a6-b2f5-3bfd1cb0cffa'
-							}
-							placeholder={
-								'https://firebasestorage.googleapis.com/v0/b/groupster-befe4.appspot.com/o/me%20and%20mikes-min.png?alt=media&token=39fff497-14d5-4735-a7d6-a98dc49698bc'
-							}>
-							{(src) => (
-								<motion.img
-									src={src}
-									alt='me and mikes'
-									whileHover={{ scale: 1.1 }}
-									transition={transition}
-								/>
-							)}
-						</ProgressiveImage>
+		<div id='home'>
+			<div className='row center'>
+				<div className='image-container'>
+					<div
+						className='thumbnail'
+						style={{
+							width: imageDetails.width,
+							height: imageDetails.height,
+						}}
+						onClick={() => {
+							scroller.scrollTo('.about', {
+								duration: 800,
+								delay: 0,
+								smooth: 'easeInOutQuart',
+							});
+						}}>
+						<div className='frame'>
+							<ProgressiveImage
+								src={
+									'https://firebasestorage.googleapis.com/v0/b/groupster-befe4.appspot.com/o/me%20and%20mikes.png?alt=media&token=cea1308f-a6c4-43a6-b2f5-3bfd1cb0cffa'
+								}
+								placeholder={
+									'https://firebasestorage.googleapis.com/v0/b/groupster-befe4.appspot.com/o/me%20and%20mikes-min.png?alt=media&token=39fff497-14d5-4735-a7d6-a98dc49698bc'
+								}>
+								{(src) => (
+									<motion.img
+										src={src}
+										alt='me and mikes'
+										whileHover={{ scale: 1.1 }}
+										transition={transition}
+									/>
+								)}
+							</ProgressiveImage>
+						</div>
 					</div>
+					<motion.div exit={{ opacity: 0 }} transition={transition} className='information'>
+						<div className='title'>Tobias Fischer</div>
+						<div className='location'>
+							<span>
+								{position.y}.{getRandomNum()}° N
+							</span>
+							<ScrollForMore />
+							<span style={{ marginLeft: '5px' }}>
+								{position.x}.{getRandomNum()}° W
+							</span>
+						</div>
+					</motion.div>
 				</div>
-				<motion.div exit={{ opacity: 0 }} transition={transition} className='information'>
-					<div className='title'>Tobias Fischer</div>
-					<div className='location'>
-						<span>
-							{position.y}.{getRandomNum()}° N
-						</span>
-						<ScrollForMore />
-						<span style={{ marginLeft: '5px' }}>
-							{position.x}.{getRandomNum()}° W
-						</span>
-					</div>
-				</motion.div>
 			</div>
 		</div>
 	);

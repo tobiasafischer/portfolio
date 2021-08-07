@@ -8,20 +8,44 @@
 	width: 100%;
 
 	.collapsible {
-		.content-icon {
+		.content-icon-container-close {
+			flex-direction: column;
+			display: flex;
+			width: 100%;
+			padding: 2vh;
 			cursor: pointer;
-			margin-bottom: 2vh;
+			justify-content: center;
+			align-items: center;
+			p {
+				font-family: 'Title' !important;
+				transform: rotate(360deg);
+				transition: all 0.7s ease;
+			}
+			#content-icon:hover {
+				transform: rotate(360deg);
+				transition: all 0.5s ease;
+			}
 		}
-		.content-icon expand {
+		.content-icon-container-open {
+			flex-direction: column;
 			transform: rotate(-180deg);
-			transition: transform 150ms ease;
-			transform-origin: 50% 50%;
+			display: flex;
+			width: 100%;
+			padding: 2vh;
+			cursor: pointer;
+			justify-content: center;
+			align-items: center;
+			p {
+				font-family: 'Title' !important;
+				transform: rotate(-180deg);
+				transition: all 0.7s ease;
+			}
+			#content-icon:hover {
+				transform: rotate(360deg);
+				transition: all 0.5s ease;
+			}
 		}
-		.content-icon close {
-			transform: rotate(-360deg);
-			transition: transform 150ms ease;
-			transform-origin: 50% 50%;
-		}
+
 		.content-parent {
 			height: 0px;
 			overflow: hidden;

@@ -17,11 +17,11 @@ const App = () => {
 				</div>
 			</main>
 			<div className='hr' style={{ width: '70%', marginLeft: '15%' }} />
-
 			<ProjectContainer />
 		</div>
 	);
 };
+//<ProjectContainer />
 // ebdbcd
 // b78f8e
 export default App;

@@ -4,7 +4,7 @@ import './About.scss';
 
 const About = () => {
 	return (
-		<div className='about'>
+		<div className='about' id='about'>
 			<Collapsible />
 		</div>
 	);

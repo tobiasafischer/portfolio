@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Modal } from 'react-bootstrap';
+import { scroller } from 'react-scroll';
+
 import ContactForm from '../Contact/ContactForm';
 const Navigation = () => {
 	const [show, setShow] = useState(false);
@@ -15,27 +17,39 @@ const Navigation = () => {
 				<Navbar.Toggle />
 				<Navbar.Collapse>
 					<Nav>
-						<Nav.Link href='/'>
+						<Nav.Link
+							onClick={() => {
+								scroller.scrollTo('home', {
+									smooth: true,
+									offset: -70,
+									duration: 500,
+								});
+							}}>
 							<span id='navigation'>home</span>
 						</Nav.Link>
-						<Nav.Link href='/about'>
+						<Nav.Link
+							onClick={() => {
+								scroller.scrollTo('about', {
+									smooth: true,
+									offset: -70,
+									duration: 500,
+								});
+							}}>
 							<span id='navigation'>about me</span>
 						</Nav.Link>
-						<Nav.Link href='#title-container'>
+						<Nav.Link
+							onClick={() => {
+								scroller.scrollTo('projects', {
+									smooth: true,
+									offset: -70,
+									duration: 500,
+								});
+							}}>
 							<span id='navigation'>projects</span>
 						</Nav.Link>
-						<button
-							onClick={handleShow}
-							style={{
-								background: 'none',
-								border: 'none',
-								margin: 0,
-								padding: 0,
-								cursor: 'pointer',
-								marginLeft: '1vw',
-							}}>
+						<Nav.Link onClick={handleShow}>
 							<span id='navigation'>contact me</span>
-						</button>
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
