@@ -19,30 +19,31 @@ $transition: 0.3s ease-out all;
 		align-items: flex-start;
 		justify-content: center;
 		z-index: 2;
-		padding: 1.25em, 1.25em, 0, 3em, 0, 0;
 		min-height: 4em;
 		border-bottom: solid 1px #3c3b3b;
 		background-color: $pink;
 		position: relative;
-
 		h3 {
 			// text-shadow: 0.5px 0.5px 0.5px $base, 0.5px 0.5px 0.5px $base;
+			margin-top: 2px;
 			letter-spacing: 0.2em;
 			color: $title;
 			margin-left: 1vw;
 			font-weight: 450px;
-			font-size: 1.5em;
+			font-size: 1.3em;
+			padding-top: 1vh;
+			padding-left: 0.1vw;
 		}
 	}
 
 	#project {
-		border: solid 1px #3c3b3b;
+		box-shadow: rgba(0, 0, 0, 0.15) 3.95px 3.95px 6.6px;
 		height: auto;
 		position: relative;
 		text-align: center;
 		object-fit: cover;
 		margin: 2vh;
-		margin-bottom: 25vh;
+		margin-bottom: 20vh;
 		&:hover img {
 			opacity: 0.3;
 			-webkit-filter: brightness(40%);

@@ -1,0 +1,45 @@
+.about {
+	z-index: 5000;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	@font-face {
+		font-family: 'Title';
+		src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-product-title.otf?v=1586468991);
+	}
+	@font-face {
+		font-family: 'Paragraph';
+		src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-paragraph.otf?v=1586465858);
+	}
+	@font-face {
+		font-family: 'H6';
+		src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-h6.otf?v=1586477316);
+	}
+
+	h1 {
+		font-family: 'Title' !important;
+
+		font-size: 30px;
+	}
+
+	h6 {
+		font-family: 'H6' !important;
+		font-weight: 1000;
+		font-size: 16px;
+		line-height: 1.2em !important;
+		margin-bottom: 0em !important;
+		margin-top: 2.2em !important;
+	}
+
+	.paragraph-container {
+		width: 100%;
+		p {
+			font-family: 'Paragraph' !important;
+			font-size: 20px;
+		}
+	}
+}

@@ -7,9 +7,9 @@ const Navigation = () => {
 	const handleShow = () => setShow(true);
 
 	return (
-		<div id='navbar'>
+		<div id='navbar' style={{ position: 'fixed' }}>
 			<Modal show={show} onHide={handleClose} centered>
-				<ContactForm />
+				<ContactForm style={{ backgroundColor: '#f0d8bb' }} />
 			</Modal>
 			<Navbar className='ml-auto'>
 				<Navbar.Toggle />
@@ -21,7 +21,7 @@ const Navigation = () => {
 						<Nav.Link href='/about'>
 							<span id='navigation'>about me</span>
 						</Nav.Link>
-						<Nav.Link href='#projects'>
+						<Nav.Link href='#title-container'>
 							<span id='navigation'>projects</span>
 						</Nav.Link>
 						<button
