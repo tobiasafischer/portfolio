@@ -7,39 +7,65 @@
 	justify-content: center;
 	width: 100%;
 
-	@font-face {
-		font-family: 'Title';
-		src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-product-title.otf?v=1586468991);
-	}
-	@font-face {
-		font-family: 'Paragraph';
-		src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-paragraph.otf?v=1586465858);
-	}
-	@font-face {
-		font-family: 'H6';
-		src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-h6.otf?v=1586477316);
-	}
+	.collapsible {
+		.content-icon {
+			cursor: pointer;
+			margin-bottom: 2vh;
+		}
+		.content-icon expand {
+			transform: rotate(-180deg);
+			transition: transform 150ms ease;
+			transform-origin: 50% 50%;
+		}
+		.content-icon close {
+			transform: rotate(-360deg);
+			transition: transform 150ms ease;
+			transform-origin: 50% 50%;
+		}
+		.content-parent {
+			height: 0px;
+			overflow: hidden;
+			transition: height ease 0.5s;
+			mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 
-	h1 {
-		font-family: 'Title' !important;
+			.content {
+				@font-face {
+					font-family: 'Title';
+					src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-product-title.otf?v=1586468991);
+				}
+				@font-face {
+					font-family: 'Paragraph';
+					src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-paragraph.otf?v=1586465858);
+				}
+				@font-face {
+					font-family: 'H6';
+					src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-h6.otf?v=1586477316);
+				}
 
-		font-size: 30px;
-	}
+				h1 {
+					font-family: 'Title' !important;
 
-	h6 {
-		font-family: 'H6' !important;
-		font-weight: 1000;
-		font-size: 16px;
-		line-height: 1.2em !important;
-		margin-bottom: 0em !important;
-		margin-top: 2.2em !important;
-	}
+					font-size: 30px;
+				}
 
-	.paragraph-container {
-		width: 70vw;
-		p {
-			font-family: 'Paragraph' !important;
-			font-size: 20px;
+				h6 {
+					font-family: 'H6' !important;
+					font-weight: 1000;
+					font-size: 16px;
+					line-height: 1.2em !important;
+					margin-bottom: 0em !important;
+					margin-top: 2.2em !important;
+					text-transform: uppercase;
+				}
+
+				.paragraph-container {
+					width: 70vw;
+					p {
+						font-family: 'Paragraph' !important;
+						font-size: 20px;
+					}
+				}
+			}
 		}
 	}
 }
