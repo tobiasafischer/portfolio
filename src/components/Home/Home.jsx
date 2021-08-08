@@ -41,10 +41,10 @@ const Home = () => {
 							height: imageDetails.height,
 						}}
 						onClick={() => {
-							scroller.scrollTo('.about', {
-								duration: 800,
-								delay: 0,
-								smooth: 'easeInOutQuart',
+							scroller.scrollTo('about', {
+								smooth: true,
+								offset: -70,
+								duration: 500,
 							});
 						}}>
 						<div className='frame'>

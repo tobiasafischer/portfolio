@@ -34,7 +34,7 @@ $primary: #ffab9d;
 				height: 480px;
 				margin: 10px;
 				background-color: #bd8290;
-				display: inline-block;
+				display: flex;
 				background-size: cover;
 				position: relative;
 				cursor: pointer;
@@ -43,9 +43,10 @@ $primary: #ffab9d;
 				overflow: hidden;
 				color: white;
 				font-family: 'Roboto';
+				justify-content: center;
+				align-items: center;
 				img {
 					object-fit: cover;
-
 					height: 100%;
 					width: 100%;
 					position: absolute;
@@ -55,6 +56,8 @@ $primary: #ffab9d;
 					transition: all 0.4s ease-out;
 				}
 				.animate-text {
+					text-align: center;
+
 					opacity: 0;
 					transition: all 0.6s ease-in-out;
 				}

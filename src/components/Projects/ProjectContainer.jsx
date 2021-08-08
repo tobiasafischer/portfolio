@@ -8,14 +8,14 @@ const ProjectContainer = () => {
 			<Project
 				title='Groupster'
 				date='June, 2021'
-				description='A chatroom application designed for bringing study groups together to chat and share files.'
+				desc='A chatroom application designed for bringing study groups together to chat and share files.'
 				demo='https://groupster-chat.herokuapp.com/'
 				code='https://github.com/h2Ocean/Groupster'
 			/>
 			<Project
 				title='RecipEZ'
 				date='May, 2021'
-				description='A recipe / shopping list app that combines recipe books with a shopping list for single moms + meal preppers!'
+				desc='A recipe / shopping list app that combines recipe books with a shopping list for single moms + meal preppers!'
 				gif={recipez}
 				demo='https://tobias-fischer-recipez.herokuapp.com/'
 				code='https://github.com/tobiasafischer/RecipEZ'
@@ -23,7 +23,7 @@ const ProjectContainer = () => {
 			<Project
 				title='Project Catwalk'
 				date='May, 2021'
-				description='A front end retail store-front application.'
+				desc='A front end retail store-front application.'
 				code='https://github.com/tobiasafischer/Project-Catwalk-FEC'
 			/>
 		</div>

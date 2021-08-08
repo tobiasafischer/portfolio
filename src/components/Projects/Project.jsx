@@ -6,12 +6,14 @@ const Project = (props) => {
 	const [{ desc }] = useState(props);
 	const [{ gif }] = useState(props);
 	const [{ img }] = useState(props);
+	const [{ code }] = useState(props);
+	const [{ demo }] = useState(props);
 
 	return (
 		<div id='project'>
 			<div className='wrap'>
 				<div className='title-container'></div>
-				<h1>gorp</h1>
+				<h1>{title}</h1>
 				<div className='tile'>
 					<img
 						src={
@@ -20,12 +22,9 @@ const Project = (props) => {
 						}
 					/>
 					<div className='text'>
-						<p className='animate-text'>
-							Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
-							meatloaf. Flank sirloin strip steak prosciutto kevin turducken.{' '}
-						</p>
-						<FancyButton title={'Demo'} />
-						<FancyButton title={'Code'} />
+						<p className='animate-text'>{desc}</p>
+						{demo ? <FancyButton title={'Demo'} link={demo} /> : <></>}
+						<FancyButton title={'Code'} link={code} />
 					</div>
 				</div>
 			</div>
