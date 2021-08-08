@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import Project from './Project';
-import Test from './Test';
 
 const ProjectContainer = () => {
 	return (
 		<div id='projects'>
-			<Test />
+			<Project />
 		</div>
 	);
 	//				gif='https://firebasestorage.googleapis.com/v0/b/portfolio-30db7.appspot.com/o/Animation.gif?alt=media&token=b1014180-3e3f-4ea6-887d-9b5f3839ad13'

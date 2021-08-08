@@ -1,40 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import Overlay from './Overlay';
-import './Project.scss';
+import './project.scss';
 
 const Project = (props) => {
 	const [{ title }] = useState(props);
-	const [{ date }] = useState(props);
-	const [{ description }] = useState(props);
-	const [{ gif }] = useState(props);
-	const [{ demo }] = useState(props);
-	const [{ code }] = useState(props);
+	const [{ desc }] = useState(props);
+	const [{ img }] = useState(props);
 
 	return (
 		<div id='project'>
-			<div id='title-container'>
-				<h3>
-					<strong>{title}</strong>
-				</h3>
-				<h3 style={{ fontSize: '0.9em', color: '#505050' }}>
-					<a>{date}</a>
-				</h3>
-			</div>
-			<div id='container'>
-				<img
-					src={gif}
-					onError={(e) => {
-						e.currentTarget.style = {};
-						e.currentTarget.src = 'https://bitsofco.de/content/images/2018/12/broken-1.png';
-					}}
-					alt='project'
-					rounded
-					thumbnail='true'
-				/>
-				<Overlay demo={demo} code={code} />
-			</div>
-			<div className='description'>
-				<p>{description}</p>
+			<div className='wrap'>
+				<div className='title-container'>
+					<h1>gorp</h1>
+					<h6>aug</h6>
+				</div>
+				<div className='tile'>
+					<img src='https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80' />
+					<div className='text'>
+						<p className='animate-text'>
+							Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
+							meatloaf. Flank sirloin strip steak prosciutto kevin turducken.{' '}
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

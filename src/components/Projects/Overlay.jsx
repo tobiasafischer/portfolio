@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Project.scss';
 
 const Overlay = (props) => {
 	const [{ demo }] = useState(props);
