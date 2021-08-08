@@ -17,7 +17,7 @@
 			justify-content: center;
 			align-items: center;
 			p {
-				font-family: 'Title' !important;
+				font-family: 'Karla', sans-serif;
 				transform: rotate(360deg);
 				transition: all 0.7s ease;
 			}
@@ -36,7 +36,7 @@
 			justify-content: center;
 			align-items: center;
 			p {
-				font-family: 'Title' !important;
+				font-family: 'Karla', sans-serif;
 				transform: rotate(-180deg);
 				transition: all 0.7s ease;
 			}
@@ -53,29 +53,16 @@
 			mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 
 			.content {
-				@font-face {
-					font-family: 'Title';
-					src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-product-title.otf?v=1586468991);
-				}
-				@font-face {
-					font-family: 'Paragraph';
-					src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-paragraph.otf?v=1586465858);
-				}
-				@font-face {
-					font-family: 'H6';
-					src: url(https://cdn.shopify.com/s/files/1/2800/8456/t/3/assets/studio-standard-h6.otf?v=1586477316);
-				}
-
 				h1 {
-					font-family: 'Title' !important;
-
+					font-family: 'Karla', sans-serif;
+					font-weight: 400;
 					font-size: 30px;
 				}
 
 				h6 {
-					font-family: 'H6' !important;
-					font-weight: 1000;
-					font-size: 16px;
+					font-family: 'Karla', sans-serif;
+					font-weight: bold;
+					font-size: 15px;
 					line-height: 1.2em !important;
 					margin-bottom: 0em !important;
 					margin-top: 2.2em !important;
@@ -84,8 +71,9 @@
 
 				.paragraph-container {
 					width: 70vw;
+					margin-top: 5px;
 					p {
-						font-family: 'Paragraph' !important;
+						font-family: 'Karla', sans-serif;
 						font-size: 20px;
 					}
 				}

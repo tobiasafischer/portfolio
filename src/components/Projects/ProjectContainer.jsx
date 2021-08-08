@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Project from './Project';
+import recipez from '../../assets/recipez.webp';
 
 const ProjectContainer = () => {
 	return (
@@ -15,6 +16,7 @@ const ProjectContainer = () => {
 				title='RecipEZ'
 				date='May, 2021'
 				description='A recipe / shopping list app that combines recipe books with a shopping list for single moms + meal preppers!'
+				gif={recipez}
 				demo='https://tobias-fischer-recipez.herokuapp.com/'
 				code='https://github.com/tobiasafischer/RecipEZ'
 			/>
