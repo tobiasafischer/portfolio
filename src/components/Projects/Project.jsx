@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import FancyButton from '../Misc/FancyButton';
 import './project.scss';
 const Project = (props) => {
@@ -20,6 +20,7 @@ const Project = (props) => {
 							gif ||
 							'https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=996&q=80'
 						}
+						alt='gif'
 					/>
 					<div className='text'>
 						<p className='animate-text'>{desc}</p>

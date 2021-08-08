@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Project from './Project';
 import recipez from '../../assets/recipez.webp';
 
@@ -28,17 +28,6 @@ const ProjectContainer = () => {
 			/>
 		</div>
 	);
-	//				gif='https://firebasestorage.googleapis.com/v0/b/portfolio-30db7.appspot.com/o/Animation.gif?alt=media&token=b1014180-3e3f-4ea6-887d-9b5f3839ad13'
 };
-{
-	/* <Project
-				t/>
-			<div className='hr' style={{ marginLeft: '0%' }} />
-			<Project
-					/>
-			<div className='hr' style={{ marginLeft: '0%' }} />
 
-			<Project
-				/> */
-}
 export default ProjectContainer;

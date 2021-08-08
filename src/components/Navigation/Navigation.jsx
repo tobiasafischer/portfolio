@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import { Navbar, Nav, Modal } from 'react-bootstrap';
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 import { scroller } from 'react-scroll';
 
 const Navigation = () => {
-	const [show, setShow] = useState(false);
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
-
 	return (
 		<div id='navbar' style={{ position: 'fixed' }}>
 			<Navbar className='ml-auto'>
