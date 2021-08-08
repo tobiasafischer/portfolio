@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './test.scss';
-const Test = (props) => {
+import './project.scss';
+const Project = (props) => {
 	const [{ title }] = useState(props);
 	const [{ desc }] = useState(props);
 	const [{ img }] = useState(props);
@@ -24,7 +24,7 @@ const Test = (props) => {
 	);
 };
 
-export default Test;
+export default Project;
 
 /*
 
