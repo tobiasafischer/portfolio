@@ -1,26 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
-
 import './contact-page.scss';
-const ContactPage = (props) => {
+const ContactPage = () => {
 	const {
 		reset,
 		register,
 		handleSubmit,
-		formState: { errors, isSubmitSuccessful },
+		formState: { errors },
 	} = useForm();
 
-	const onSubmit = (data) => {
-		console.log(data);
+	const onSubmit = ({ subject, from_name, message }) => {
+		let templateParams = {
+			from_name,
+			to_name: 'tobias.alan.fischer@gmail.com',
+			subject,
+			message,
+		};
+
+		emailjs.send(
+			process.env.REACT_APP_EMAIL_SERVICE_ID,
+			process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+			templateParams,
+			process.env.REACT_APP_EMAIL_USER_ID,
+		);
+		handleReset();
 	};
 
 	const handleReset = () => {
 		reset(
 			{
-				name: '',
-				email: '',
-				msg: '',
+				from_name: '',
+				subject: '',
+				message: '',
 			},
 			{
 				keepErrors: false,
@@ -43,17 +55,9 @@ const ContactPage = (props) => {
 						<div className='app-form-group'>
 							<input
 								className='app-form-control'
-								{...register('name', { required: true })}
-								placeholder='NAME'
-							/>
-							{errors.name && <p>Required</p>}
-						</div>
-						<div className='app-form-group'>
-							<input
-								className='app-form-control'
 								type='email'
 								placeholder='EMAIL'
-								{...register('email', {
+								{...register('from_name', {
 									required: 'required',
 									pattern: {
 										value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -61,16 +65,23 @@ const ContactPage = (props) => {
 									},
 								})}
 							/>
-							{errors.email && errors.email.message}
+							{errors.from_name && errors.from_name.message}
 						</div>
-
+						<div className='app-form-group'>
+							<input
+								className='app-form-control'
+								{...register('subject', { required: true })}
+								placeholder='SUBJECT'
+							/>
+							{errors.subject && <p>Required</p>}
+						</div>
 						<div className='app-form-group message'>
 							<input
 								className='app-form-control'
-								{...register('msg', { required: true })}
+								{...register('message', { required: true })}
 								placeholder='MESSAGE'
 							/>
-							{errors.msg && <p>Required</p>}
+							{errors.message && <p>Required</p>}
 						</div>
 						<div className='app-form-group buttons'>
 							<button className='app-form-button' onClick={handleReset}>
