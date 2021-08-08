@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import ProjectContainer from './components/Projects/ProjectContainer';
 import About from './components/About/About';
+import ContactPage from './components/Contact/ContactPage';
 import './App.scss';
 
 const App = () => {
@@ -14,10 +15,12 @@ const App = () => {
 				<div className='container'>
 					<Home />
 					<About />
+					<div className='hr' style={{ width: '100%' }} />
+					<ProjectContainer />
+					<div className='hr' style={{ width: '100%' }} />
+					<ContactPage />
 				</div>
 			</main>
-			<div className='hr' style={{ width: '70%', marginLeft: '15%' }} />
-			<ProjectContainer />
 		</div>
 	);
 };
