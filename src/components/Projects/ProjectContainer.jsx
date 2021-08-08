@@ -15,7 +15,7 @@ const ProjectContainer = () => {
 			<Project
 				title='RecipEZ'
 				date='May, 2021'
-				desc='A recipe / shopping list app that combines recipe books with a shopping list for single moms + meal preppers!'
+				desc='A recipe / shopping list app built in 2 days that combines recipe books with a shopping list for single moms + meal preppers alike!'
 				gif={recipez}
 				demo='https://tobias-fischer-recipez.herokuapp.com/'
 				code='https://github.com/tobiasafischer/RecipEZ'

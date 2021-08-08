@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 
 import './contact-page.scss';
 const ContactPage = (props) => {
@@ -29,7 +30,7 @@ const ContactPage = (props) => {
 	};
 
 	return (
-		<div className='screen-body'>
+		<div id='contact' className='screen-body'>
 			<div className='screen-body-item left'>
 				<div className='app-title'>
 					<span>CONTACT ME {'<3'}</span>
