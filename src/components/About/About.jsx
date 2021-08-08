@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Collapsible from './Collapsible';
 import './About.scss';
 

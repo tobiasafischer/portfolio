@@ -7,8 +7,6 @@ const Collapsible = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [date, setDate] = useState('');
 	const parentRef = useRef();
-	const startRef = useRef();
-	const endRef = useRef();
 
 	const bday = new Date(2000, 10, 21, 22, 59);
 
