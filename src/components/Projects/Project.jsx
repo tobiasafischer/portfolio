@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FancyButton from '../Misc/FancyButton';
 import './project.scss';
 const Project = (props) => {
 	const [{ title }] = useState(props);
@@ -17,6 +18,8 @@ const Project = (props) => {
 							Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken
 							meatloaf. Flank sirloin strip steak prosciutto kevin turducken.{' '}
 						</p>
+						<FancyButton title={'Demo'} />
+						<FancyButton title={'Code'} />
 					</div>
 				</div>
 			</div>
