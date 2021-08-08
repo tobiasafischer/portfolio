@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Project from './Project';
 import Test from './Test';
 
 const ProjectContainer = () => {
