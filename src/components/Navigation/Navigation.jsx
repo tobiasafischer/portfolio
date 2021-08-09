@@ -49,6 +49,14 @@ const Navigation = () => {
 							}}>
 							<span id='navigation'>contact me</span>
 						</Nav.Link>
+						<Nav.Link
+							onClick={() => {
+								scroller.scrollTo('contact', {
+									smooth: true,
+									offset: -70,
+									duration: 500,
+								});
+							}}></Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
