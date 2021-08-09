@@ -1,7 +1,8 @@
 import React from 'react';
 import Project from './Project';
 import recipez from '../../assets/recipez.webp';
-
+import groupster from '../../assets/groupster.webp';
+import fec from '../../assets/fec.webp';
 const ProjectContainer = () => {
 	return (
 		<div id='projects'>
@@ -9,6 +10,7 @@ const ProjectContainer = () => {
 				title='Groupster'
 				date='June, 2021'
 				desc='A chatroom application designed for bringing study groups together to chat and share files.'
+				gif={groupster}
 				demo='https://groupster-chat.herokuapp.com/'
 				code='https://github.com/h2Ocean/Groupster'
 			/>
@@ -24,6 +26,7 @@ const ProjectContainer = () => {
 				title='Project Catwalk'
 				date='May, 2021'
 				desc='A front end retail store-front application.'
+				gif={fec}
 				code='https://github.com/tobiasafischer/Project-Catwalk-FEC'
 			/>
 		</div>

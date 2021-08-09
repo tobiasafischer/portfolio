@@ -28,7 +28,7 @@ const ScrollForMore = () => {
 								transform='translate(-68.266)'
 								fill='none'
 								stroke='black'
-								stroke-width='.7'
+								strokeWidth='.7'
 							/>
 						</g>
 					</g>
