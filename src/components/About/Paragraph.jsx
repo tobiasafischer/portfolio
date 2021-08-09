@@ -137,7 +137,7 @@ const Paragraph = (props) => {
 				</p>
 
 				<button
-					style={{ backgroundColor: '#bd8290', borderColor: '#bd8290' }}
+					style={{ marginTop: '1vh', backgroundColor: '#bd8290', borderColor: '#bd8290' }}
 					className='btn-primary'
 					onClick={() => setIsVideo(true)}>
 					SICK NASTY SKATE CLIPS🥵
