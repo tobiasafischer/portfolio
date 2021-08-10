@@ -63,7 +63,7 @@ const ContactPage = () => {
 				</div>
 				<div className='social-media' style={{ marginBottom: '1vh' }}>
 					<GetAppIcon style={{ color: 'black' }} />
-					<a href={Resume} download={Resume}>
+					<a href={Resume} download='tobias_fischer_resume'>
 						resume
 					</a>
 				</div>
