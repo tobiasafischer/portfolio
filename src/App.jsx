@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import ProjectContainer from './components/Projects/ProjectContainer';
 import About from './components/About/About';
 import ContactPage from './components/Contact/ContactPage';
+import Languages from './components/Languages/Languages';
 import './App.scss';
 
 const App = () => {
@@ -17,6 +18,8 @@ const App = () => {
 					<About />
 					<div className='hr' style={{ width: '100%' }} />
 					<ProjectContainer />
+					<div className='hr' style={{ width: '100%' }} />
+					<Languages />
 					<div className='hr' style={{ width: '100%' }} />
 					<ContactPage />
 				</div>
