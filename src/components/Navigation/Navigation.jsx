@@ -41,6 +41,16 @@ const Navigation = () => {
 						</Nav.Link>
 						<Nav.Link
 							onClick={() => {
+								scroller.scrollTo('languages', {
+									smooth: true,
+									offset: -70,
+									duration: 500,
+								});
+							}}>							
+							<span id='navigation'>languages</span>
+						</Nav.Link>
+						<Nav.Link
+							onClick={() => {
 								scroller.scrollTo('contact', {
 									smooth: true,
 									offset: -70,
@@ -49,6 +59,7 @@ const Navigation = () => {
 							}}>
 							<span id='navigation'>contact me</span>
 						</Nav.Link>
+						
 						<Nav.Link
 							onClick={() => {
 								scroller.scrollTo('contact', {
