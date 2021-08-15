@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './languages.scss';
 
 const Languages = () => (
@@ -21,7 +21,6 @@ const Languages = () => (
 			<i className='devicon-graphql-plain colored' />
 			<i className='devicon-mongodb-plain colored' />
 			<i className='devicon-postgresql-plain colored' />
-	
 		</div>
 		<div className='languages'>
 			<h3>Misc</h3>
@@ -31,9 +30,7 @@ const Languages = () => (
 			<i className='devicon-amazonwebservices-original colored' />
 			<i className='devicon-ubuntu-plain colored' />
 			<i className='devicon-jest-plain colored' />
-			<i className="devicon-webpack-plain colored" />
-
-
+			<i className='devicon-webpack-plain colored' />
 		</div>
 	</div>
 );
